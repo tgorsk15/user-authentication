@@ -10,13 +10,12 @@ const LocalStrategy = require('passport-local').Strategy
 const pool = new Pool({
     host: "localhost", // or wherever the db is hosted
     user: "tyler15",
-    database: "users",
+    database: "tyler15",
     password: "Kfkenny13!!",
     port: 5432 // the default port
 })
 
 const app = express();
-// app.set("views", __dirname);
 app.set("view engine", "ejs");
 
 app.use(session({ secret: "cats", resave: false, saveUninitialized: false}))
