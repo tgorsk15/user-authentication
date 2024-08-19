@@ -7,6 +7,23 @@
 </head>
 <body>
     <h1>Hello peeps</h1>
+    <% if (user) {%>
+        <h2>WELCOME BACK <%= user.username %></h2>
+        <br>
+        <a href="/log-out">LOG OUT</a>
+    <% } else { %>
+        <h2>Please log in:</h2>
+        <form action="/log-in" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <button>Log In</button>
+        </form>  
+    <% } %>
+    
+
     <a href="/sign-up">Create User</a>
 </body>
 </html>
